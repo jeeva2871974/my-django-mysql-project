@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Code Career Launch School{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        color: white;
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        color: #cbd5e1;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 2rem;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Accelerate Your Tech Career</h1>
+        <p>Industry-aligned software engineering tracks designed to take you from fundamentals to employment.</p>
+        <a href="{% url 'contact' %}" class="btn">Enroll Now</a>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Featured Tracks</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Full-Stack Web Development</h3>
+                <p>Master modern web architectures using Python, Django, HTML5, CSS3, and relational databases.</p>
+            </div>
+            <div class="card">
+                <h3>Data Systems & SQL</h3>
+                <p>Learn schema design, query optimization, and enterprise database integration with MySQL.</p>
+            </div>
+            <div class="card">
+                <h3>Career Mentorship</h3>
+                <p>Get personalized portfolio reviews, interview coaching, and network referrals from industry seniors.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

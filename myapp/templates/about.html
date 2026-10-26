@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Code Career Launch School{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-header {
+        background-color: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .stat-card {
+        background: var(--surface);
+        padding: 2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary);
+    }
+
+    .stat-label {
+        color: var(--text-muted);
+        font-weight: 600;
+        margin-top: 0.25rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="about-header">
+    <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Empowering the Next Generation of Engineers</h1>
+        <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+            Code Career Launch School (CCLS) was founded to bridge the gap between academic computer science concepts and real-world software production standards.
+        </p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">94%</div>
+                <div class="stat-label">Graduate Placement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1:1</div>
+                <div class="stat-label">Mentorship Ratio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Alumni Network</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
